@@ -1,101 +1,95 @@
-import Image from "next/image";
+import { ArrowDown, Brain, ShoppingBag, Zap } from 'lucide-react'
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="min-h-screen w-full overflow-y-auto snap-y snap-mandatory">
+      {/* Hero Section */}
+      <section className="min-h-screen w-full snap-start bg-gradient-to-b from-background to-background/50 flex flex-col items-center justify-center relative px-4">
+        <div className="space-y-6 text-center max-w-4xl mx-auto">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+            Bits N&apos; Bytes
+          </h1>
+          <p className="text-xl sm:text-2xl text-muted-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+            The Future of Vending, Powered by AI
+          </p>
+          <Button
+            variant="outline"
+            size="lg"
+            className="animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Learn More <ArrowDown className="ml-2 h-4 w-4" />
+          </Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </section>
+
+      {/* Features Section */}
+      <section className="min-h-screen w-full snap-start bg-gradient-to-b from-background/50 to-background flex items-center justify-center px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12">
+            Innovative Features
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="p-6 backdrop-blur-sm bg-background/50">
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Brain className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">AI-Powered</h3>
+                <p className="text-muted-foreground">
+                  Advanced machine learning algorithms for smart inventory management and user interactions
+                </p>
+              </div>
+            </Card>
+            <Card className="p-6 backdrop-blur-sm bg-background/50">
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <ShoppingBag className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Smart Shopping</h3>
+                <p className="text-muted-foreground">
+                  Seamless checkout process with automatic item detection and tracking
+                </p>
+              </div>
+            </Card>
+            <Card className="p-6 backdrop-blur-sm bg-background/50">
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Zap className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold">Real-time Analytics</h3>
+                <p className="text-muted-foreground">
+                  Instant insights into inventory levels and purchasing patterns
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Future Vision Section */}
+      <section className="min-h-screen w-full snap-start bg-gradient-to-b from-background to-background/50 flex items-center justify-center px-4">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+            The Future of Vending
+          </h2>
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            We&apos;re building more than just a vending machine - we&apos;re creating an
+            intelligent retail experience that understands and adapts to user needs
+            in real-time. With advanced AI capabilities and sensor technology,
+            Bits N&apos; Bytes represents the next evolution in automated retail.
+          </p>
+          <div className="pt-8">
+            <Button size="lg" className="mr-4">
+              Get Started
+            </Button>
+            <Button variant="outline" size="lg">
+              Learn More
+            </Button>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
 }
