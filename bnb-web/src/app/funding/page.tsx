@@ -1,7 +1,8 @@
 import { Progress } from "@/components/ui/progress"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { HeartHandshake } from 'lucide-react'
+import { HeartHandshake } from "lucide-react"
+import Link from "next/link"
 
 export default function FundingPage() {
   // Example current amount - you can make this dynamic
@@ -16,9 +17,7 @@ export default function FundingPage() {
           <div className="mx-auto bg-primary/10 w-fit p-4 rounded-full">
             <HeartHandshake className="w-8 h-8 text-primary" />
           </div>
-          <CardTitle className="text-3xl sm:text-4xl font-bold">
-            Help Us Get to OpenSauce 2025!
-          </CardTitle>
+          <CardTitle className="text-3xl sm:text-4xl font-bold">Help Us Get to OpenSauce 2025!</CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="space-y-2">
@@ -28,13 +27,13 @@ export default function FundingPage() {
             </div>
             <Progress value={progressPercentage} className="h-2" />
           </div>
-          
+
           <div className="space-y-4 text-center">
             <p className="text-lg text-muted-foreground">
-              We&apos;re raising funds to present Bits N&apos; Bytes at OpenSauce 2025 in California. 
-              Your support will help us showcase our innovative AI-powered vending machine to the tech community.
+              We&apos;re raising funds to present Bits N&apos; Bytes at OpenSauce 2025 in California. Your support will
+              help us showcase our innovative AI-powered vending machine to the tech community.
             </p>
-            
+
             <div className="space-y-2">
               <p className="font-semibold">Your contribution will help cover:</p>
               <ul className="text-muted-foreground space-y-1">
@@ -44,13 +43,15 @@ export default function FundingPage() {
                 <li>• Presentation materials</li>
               </ul>
             </div>
-
-            <Button size="lg" className="mt-4">
-              Support Our Project
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="mt-4">
+                Support Our Project
+              </Button>
+            </Link>
           </div>
         </CardContent>
       </Card>
     </div>
   )
 }
+

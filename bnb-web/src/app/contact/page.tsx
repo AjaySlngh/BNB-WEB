@@ -22,7 +22,7 @@ export default function ContactPage() {
               <Mail className="w-5 h-5 text-primary" />
               <div>
                 <p className="text-sm text-muted-foreground">Email</p>
-                <p className="font-medium">bitsnbytes@example.com</p>
+                <p className="font-medium">aos2500@g.rit.edu</p>
               </div>
             </div>
 
@@ -30,7 +30,7 @@ export default function ContactPage() {
               <MapPin className="w-5 h-5 text-primary" />
               <div>
                 <p className="text-sm text-muted-foreground">Location</p>
-                <p className="font-medium">Computer Science House</p>
+                <p className="font-medium">Rochester Institute of Technology</p>
               </div>
             </div>
           </div>
